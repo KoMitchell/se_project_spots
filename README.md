@@ -1,21 +1,24 @@
-# Project 3: Spots
+# Project 3: Spots- Responsive Photo-Sharing Webpage
 
-### Overview  
+Spots is a responsive webpage built as part of the TripleTen Web Development program. The project recreates a photo sharing interface using semantic HTML and modular CSS. It adapts smoothly across desktop, tablet, and mobile screens using Flexbox, CSS Grid, and media queries.
 
-* Intro  
-* Figma  
-* Images  
-  
-**Intro**
-  
-This project is made so all the elements are displayed correctly on popular screen sizes. We recommend investing more time in completing this project, since it's more difficult than previous ones.  
-  
-**Figma**  
-  
-* [Link to the project on Figma](https://www.figma.com/file/BBNm2bC3lj8QQMHlnqRsga/Sprint-3-Project-%E2%80%94-Spots?type=design&node-id=2%3A60&mode=design&t=afgNFybdorZO6cQo-1)
-  
-**Images**  
-  
-The way you'll do this at work is by exporting images directly from Figma — we recommend doing that to practice more. Don't forget to optimize them [here](https://tinypng.com/), so your project loads faster. 
-  
-Good luck and have fun!
+This project includes:
+• A profile section with an avatar, name, description, and action buttons
+• A responsive grid of photo cards
+• A footer section
+• Fully responsive behavior across three breakpoints
+• Clean, accessible structure following best practices
+The goal is to learn how to build responsive layouts that match a Figma design using modern CSS techniques.
+
+Technologies & Techniques Used
+• HTML5
+• CSS3
+• Flexbox
+• CSS Grid
+• Media Queries
+• Responsive Design Principles
+• Figma based layout implementation
+
+https://komitchell.github.io/se_project_spots/
+
+https://www.loom.com/share/44ccea168bf243e689fd4de5c760db4c
