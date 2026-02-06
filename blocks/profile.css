@@ -23,7 +23,7 @@
 .profile__name {
   margin: 0 0 12px;
   font-size: 32px;
-  font-weight: 700;
+  font-weight: 500;
   line-height: 100%;
   display: -webkit-box;
   overflow: hidden;
@@ -36,6 +36,7 @@
 .profile__description {
   margin: 0 0 12px;
   font-size: 18px;
+  font-weight: 400;
   display: -webkit-box;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -44,41 +45,42 @@
   max-width: 420px;
 }
 
-.profile__edit-profile-btn {
+.profile__edit-profile-button {
   display: inline-flex;
   align-items: center;
   gap: 6px;
   background: none;
   border: none;
   padding: 0;
-  margin-top: 80px;
+  margin-top: 12px;
   font-size: 16px;
   color: #212121;
 }
 
-.profile__edit-profile-btn:hover {
+.profile__edit-profile-button:hover {
   opacity: 0.6;
+  margin-top: 4px;
 }
 
-.profile__new-post-btn {
+.profile__new-post-button {
   margin-left: auto;
-  margin-top: 200px;
+  margin-top: 140px;
+  align-self: center;
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 8px;
   height: 52px;
-  width: 149px;
+  width: 157px;
   background-color: #212121;
   border-radius: 8px;
-
-  font-family: Poppins-medium, Arial, Helvetica, sans-serif;
+  font-family: Poppins-Medium, Arial, Helvetica, sans-serif;
   color: #fcf5e5;
   font-weight: 500;
   font-size: 16px;
 }
 
-.profile__new-post-btn:hover {
+.profile__new-post-button:hover {
   opacity: 0.6;
 }
 
@@ -110,12 +112,12 @@
     max-width: 288px;
   }
 
-  .profile__edit-profile-btn {
+  .profile__edit-profile-button {
     margin-top: 20px;
     align-self: center;
   }
 
-  .profile__new-post-btn {
+  .profile__new-post-button {
     margin: 0;
     justify-content: center;
     width: 288px;
