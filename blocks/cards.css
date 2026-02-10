@@ -1,20 +1,17 @@
 .cards {
   padding-top: 20px;
-  box-sizing: border-box;
+  max-width: 1280px;
 }
 
 .cards__list {
   list-style-type: none;
   padding: 0;
-  margin: 0 auto;
-}
-
-.cards__list {
+  margin: 0;
   display: grid;
   gap: 40px 20px;
-  justify-content: center;
   grid-template-columns: repeat(auto-fit, 413px);
   box-sizing: border-box;
+  justify-content: center;
 }
 
 @media screen and (max-width: 630px) {
