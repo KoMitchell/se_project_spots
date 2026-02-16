@@ -1,6 +1,8 @@
 .cards {
   padding-top: 20px;
   max-width: 1280px;
+  margin: 0 auto;
+  width: 100%;
 }
 
 .cards__list {

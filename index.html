@@ -22,11 +22,12 @@
 
   <body>
     <div class="page">
-      <header class="header">
-        <img src="./images/Logo.svg" alt="Spots logo" class="header__logo" />
-      </header>
-
       <main class="page__content">
+        <header class="header">
+          <img src="./images/Logo.svg" alt="Spots logo" class="header__logo" />
+        </header>
+
+        <!-- Profile section -->
         <section class="profile page__section">
           <img
             src="./images/avatar.jpg"
@@ -35,14 +36,12 @@
           />
 
           <div class="profile__info">
-            <h1 class="profile__name">
-              Bessie (Elizabeth) Coleman (January 26, 1892 – April 30, 1926) was
-              an early American civil aviator. She was the first
-              African-American woman and first Native American to hold a pilot
-              license, and is the earliest known Black person to earn an
-              international pilot's license.
-            </h1>
-            <p class="profile__description">Civil Aviator</p>
+            <h1 class="profile__name">Bessie (Elizabeth) Coleman</h1>
+
+            <p class="profile__description">
+              Early American civil aviator. First African-American woman and
+              first Native American to hold a pilot license.
+            </p>
 
             <button type="button" class="profile__edit-profile-button">
               <img src="./images/button-secondary.svg" alt="Edit profile" />
@@ -55,87 +54,76 @@
           </button>
         </section>
 
-        <!--Cards-->
+        <!-- Cards section-->
         <section class="cards page__section">
           <ul class="cards__list">
-            <!--Card 1-->
+            <!-- Card 1-->
             <li class="card">
               <img
                 src="./images/1-photo-by-moritz-feldmann-from-pexels.jpg"
                 alt="Val Thorens"
                 class="card__image"
               />
-
               <div class="card__content">
                 <h2 class="card__title">Val Thorens</h2>
                 <button type="button" class="card__like-button"></button>
               </div>
             </li>
-
-            <!--Card 2-->
+            <!-- Card 2-->
             <li class="card">
               <img
                 src="./images/2-photo-by-ceiline-from-pexels.jpg"
                 alt="Restaurant terrace"
                 class="card__image"
               />
-
               <div class="card__content">
                 <h2 class="card__title">Restaurant terrace</h2>
                 <button type="button" class="card__like-button"></button>
               </div>
             </li>
-
-            <!--Card 3-->
+            <!-- Card 3-->
             <li class="card">
               <img
                 src="./images/3-photo-by-tubanur-dogan-from-pexels.jpg"
                 alt="Outdoor cafe"
                 class="card__image"
               />
-
               <div class="card__content">
                 <h2 class="card__title">An outdoor cafe</h2>
                 <button type="button" class="card__like-button"></button>
               </div>
             </li>
-
-            <!--Card 4-->
+            <!-- Card 4-->
             <li class="card">
               <img
                 src="./images/4-photo-by-maurice-laschet-from-pexels.jpg"
                 alt="Long bridge"
                 class="card__image"
               />
-
               <div class="card__content">
                 <h2 class="card__title">A very long bridge, over the forest</h2>
                 <button type="button" class="card__like-button"></button>
               </div>
             </li>
-
-            <!--Card 5-->
+            <!-- Card 5-->
             <li class="card">
               <img
                 src="./images/5-photo-by-van-anh-nguyen-from-pexels.jpg"
                 alt="Tunnel"
                 class="card__image"
               />
-
               <div class="card__content">
                 <h2 class="card__title">Tunnel with morning light</h2>
                 <button type="button" class="card__like-button"></button>
               </div>
             </li>
-
-            <!--Card 6-->
+            <!-- Card 6-->
             <li class="card">
               <img
                 src="./images/6-photo-by-moritz-feldmann-from-pexels.jpg"
                 alt="Mountain house"
                 class="card__image"
               />
-
               <div class="card__content">
                 <h2 class="card__title">Mountain house</h2>
                 <button type="button" class="card__like-button"></button>
@@ -143,11 +131,82 @@
             </li>
           </ul>
         </section>
+
+        <!-- Footer -->
+        <footer class="footer page__section">
+          <p class="footer__copyright">2026 © Spots</p>
+        </footer>
       </main>
 
-      <footer class="footer page__section">
-        <p class="footer__copyright">2026 © Spots</p>
-      </footer>
+      <!-- Edit profile modal -->
+      <div class="modal modal_is-opened">
+        <div class="modal__container">
+          <button type="button" class="modal__close-button">
+            <img src="./images/Close Icon.svg" alt="Close" />
+          </button>
+
+          <h2 class="modal__title">Edit profile</h2>
+
+          <form class="modal__form" name="edit-profile">
+            <label for="profile-name-input" class="modal__label">
+              Name
+              <input
+                id="profile-name-input"
+                type="text"
+                class="modal__input"
+                placeholder="Type your name"
+              />
+            </label>
+
+            <label for="profile-description-input" class="modal__label">
+              Description
+              <input
+                id="profile-description-input"
+                type="text"
+                class="modal__input"
+                placeholder="Describe yourself"
+              />
+            </label>
+
+            <button type="submit" class="modal__save-button">Save</button>
+          </form>
+        </div>
+      </div>
+
+      <!-- New post modal -->
+      <div class="modal modal_is-opened">
+        <div class="modal__container">
+          <button type="button" class="modal__close-button">
+            <img src="./images/Close Icon.svg" alt="Close" />
+          </button>
+
+          <h2 class="modal__title">New post</h2>
+
+          <form class="modal__form" name="new-post">
+            <label for="card-image-input" class="modal__label">
+              Image link
+              <input
+                id="card-image-input"
+                type="url"
+                class="modal__input"
+                placeholder="Paste a link to the picture"
+              />
+            </label>
+
+            <label for="image-caption-input" class="modal__label">
+              Caption
+              <input
+                id="image-caption-input"
+                type="text"
+                class="modal__input"
+                placeholder="Type your caption"
+              />
+            </label>
+
+            <button type="submit" class="modal__save-button">Save</button>
+          </form>
+        </div>
+      </div>
     </div>
   </body>
 </html>

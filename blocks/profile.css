@@ -30,7 +30,6 @@
   text-overflow: ellipsis;
   -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
-  max-width: 420px;
 }
 
 .profile__description {
@@ -42,7 +41,6 @@
   text-overflow: ellipsis;
   -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
-  max-width: 420px;
 }
 
 .profile__edit-profile-button {
