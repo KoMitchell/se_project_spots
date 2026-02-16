@@ -139,7 +139,7 @@
       </main>
 
       <!-- Edit profile modal -->
-      <div class="modal modal_is-opened">
+      <div class="modal">
         <div class="modal__container">
           <button type="button" class="modal__close-button">
             <img src="./images/Close Icon.svg" alt="Close" />
@@ -174,39 +174,39 @@
       </div>
 
       <!-- New post modal -->
-      <div class="modal modal_is-opened">
-        <div class="modal__container">
-          <button type="button" class="modal__close-button">
-            <img src="./images/Close Icon.svg" alt="Close" />
-          </button>
+      <div class="modal">
+  <div class="modal__container">
+    <button type="button" class="modal__close-button">
+      <img src="./images/Close Icon.svg" alt="Close" />
+    </button>
 
-          <h2 class="modal__title">New post</h2>
+    <h2 class="modal__title">New post</h2>
 
-          <form class="modal__form" name="new-post">
-            <label for="card-image-input" class="modal__label">
-              Image link
-              <input
-                id="card-image-input"
-                type="url"
-                class="modal__input"
-                placeholder="Paste a link to the picture"
-              />
-            </label>
+    <form class="modal__form" name="new-post">
+      <label for="card-image-input" class="modal__label">
+        Image link
+        <input
+          id="card-image-input"
+          type="url"
+          class="modal__input"
+          placeholder="Paste a link to the picture"
+        />
+      </label>
 
-            <label for="image-caption-input" class="modal__label">
-              Caption
-              <input
-                id="image-caption-input"
-                type="text"
-                class="modal__input"
-                placeholder="Type your caption"
-              />
-            </label>
+      <label for="image-caption-input" class="modal__label">
+        Caption
+        <input
+          id="image-caption-input"
+          type="text"
+          class="modal__input"
+          placeholder="Type your caption"
+        />
+      </label>
 
-            <button type="submit" class="modal__save-button">Save</button>
-          </form>
-        </div>
-      </div>
-    </div>
+      <button type="submit" class="modal__save-button">Save</button>
+    </form>
+  </div>
+</div>
+
   </body>
 </html>
