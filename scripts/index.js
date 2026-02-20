@@ -25,7 +25,17 @@ const initialCards = [
   },
 ];
 
-// Edit Profile modal
+initialCards.forEach(function (card) {
+  console.log(card.name);
+});
+
+// Profile elements
+
+const profileNameEl = document.querySelector(".profile__name");
+const profileDescriptionEl = document.querySelector(".profile__description");
+
+// Edit Profile Modal Elements
+
 const editProfileButton = document.querySelector(
   ".profile__edit-profile-button",
 );
@@ -33,22 +43,39 @@ const editProfileModal = document.querySelector("#edit-profile-modal");
 const editProfileCloseBtn = editProfileModal.querySelector(
   ".modal__close-button",
 );
+const editProfileForm = editProfileModal.querySelector(".modal__form");
 
-// New Post modal
+const editProfileNameInput = editProfileModal.querySelector(
+  "#profile-name-input",
+);
+const editProfileDescriptionInput = editProfileModal.querySelector(
+  "#profile-description-input",
+);
+
+// New Post Modal Elements
+
 const newPostButton = document.querySelector(".profile__new-post-button");
 const newPostModal = document.querySelector("#new-post-modal");
 const newPostCloseBtn = newPostModal.querySelector(".modal__close-button");
+const newPostForm = newPostModal.querySelector(".modal__form");
 
-// Edit Profile modal
+const newPostImageInput = newPostModal.querySelector("#card-image-input");
+const newPostCaptionInput = newPostModal.querySelector("#image-caption-input");
+
+// Open / Close Modals
+
 editProfileButton.addEventListener("click", function () {
   editProfileModal.classList.add("modal_is-opened");
+
+  // Pre-fill inputs with current profile text
+  editProfileNameInput.value = profileNameEl.textContent;
+  editProfileDescriptionInput.value = profileDescriptionEl.textContent;
 });
 
 editProfileCloseBtn.addEventListener("click", function () {
   editProfileModal.classList.remove("modal_is-opened");
 });
 
-// New Post modal
 newPostButton.addEventListener("click", function () {
   newPostModal.classList.add("modal_is-opened");
 });
@@ -57,6 +84,27 @@ newPostCloseBtn.addEventListener("click", function () {
   newPostModal.classList.remove("modal_is-opened");
 });
 
-initialCards.forEach(function (card) {
-  console.log(card.name);
-});
+// Edit Profile Form Submission
+
+function handleEditProfileSubmit(evt) {
+  evt.preventDefault();
+
+  profileNameEl.textContent = editProfileNameInput.value;
+  profileDescriptionEl.textContent = editProfileDescriptionInput.value;
+
+  editProfileModal.classList.remove("modal_is-opened");
+}
+
+editProfileForm.addEventListener("submit", handleEditProfileSubmit);
+
+// New Post Form Submission
+function handleNewPostSubmit(evt) {
+  evt.preventDefault();
+
+  console.log(newPostImageInput.value);
+  console.log(newPostCaptionInput.value);
+
+  newPostModal.classList.remove("modal_is-opened");
+}
+
+newPostForm.addEventListener("submit", handleNewPostSubmit);
