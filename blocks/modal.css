@@ -7,8 +7,9 @@
   align-items: center;
   inset: 0;
   opacity: 0;
-  transition: opacity 0.3 ease;
-  visibility: 0.3 ease;
+  transition:
+    opacity 0.3s ease,
+    visibility 0.3s ease;
 }
 
 .modal_is-opened {
