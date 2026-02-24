@@ -48,3 +48,21 @@
 .card__like-button:hover {
   opacity: 1;
 }
+
+@media screen and (max-width: 630px) {
+  .cards__list {
+    padding: 0 16px;
+    justify-content: center;
+  }
+  .card {
+    max-width: 288px;
+    margin: 0 auto;
+    justify-content: center;
+  }
+
+  .card__image {
+    width: 288px;
+    height: 288px;
+    margin: 0 auto;
+  }
+}
