@@ -67,6 +67,7 @@
   font-weight: 500;
   font-size: 16px;
   gap: 8px;
+  margin-bottom: 32px;
 }
 
 .modal__input {
@@ -78,10 +79,29 @@
   border-radius: 8px;
   border: 1px solid #21212166;
   box-sizing: border-box;
+  margin-bottom: 0;
 }
 
 .modal__input::placeholder {
   color: #2121214d;
+}
+.modal__error {
+  display: block;
+  margin-top: 8px;
+  color: #ff0000b2;
+  font-family: "Poppins", Arial, Helvetica, sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.modal__error_visible {
+  opacity: 1;
+}
+
+.modal__input_type_error {
+  border: 1px solid #ff0000b2;
 }
 
 .modal__save-button {

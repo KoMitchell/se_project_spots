@@ -51,10 +51,7 @@
           <div class="profile__info">
             <h1 class="profile__name">Bessie (Elizabeth) Coleman</h1>
 
-            <p class="profile__description">
-              Early American civil aviator. First African-American woman and
-              first Native American to hold a pilot license.
-            </p>
+            <p class="profile__description">Civil Aviator</p>
 
             <button type="button" class="profile__edit-profile-button">
               <img src="./images/button-secondary.svg" alt="" />
@@ -106,7 +103,11 @@
                 type="text"
                 class="modal__input"
                 placeholder="Type your name"
+                required
+                minlength="2"
+                maxlength="40"
               />
+              <span id="profile-name-input-error" class="modal__error"></span>
             </label>
 
             <label for="profile-description-input" class="modal__label">
@@ -116,7 +117,14 @@
                 type="text"
                 class="modal__input"
                 placeholder="Describe yourself"
+                required
+                minlength="2"
+                maxlength="200"
               />
+              <span
+                id="profile-description-input-error"
+                class="modal__error"
+              ></span>
             </label>
 
             <button type="submit" class="modal__save-button">Save</button>
@@ -141,7 +149,9 @@
                 type="url"
                 class="modal__input"
                 placeholder="Paste a link to the picture"
+                required
               />
+              <span id="card-image-input-error" class="modal__error"></span>
             </label>
 
             <label for="image-caption-input" class="modal__label">
@@ -151,7 +161,11 @@
                 type="text"
                 class="modal__input"
                 placeholder="Type your caption"
+                required
+                minlength="2"
+                maxlength="30"
               />
+              <span id="image-caption-input-error" class="modal__error"></span>
             </label>
 
             <button type="submit" class="modal__save-button">Save</button>
@@ -172,6 +186,7 @@
       </div>
 
       <script src="./scripts/index.js"></script>
+      <script src="./scripts/validation.js"></script>
     </div>
   </body>
 </html>
