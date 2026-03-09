@@ -87,12 +87,11 @@ function getCardElement(data) {
   cardImageEl.alt = data.name;
   cardTitleEl.textContent = data.name;
 
-  // Open preview modal when image is clicked
+  // Open preview modal
   cardImageEl.addEventListener("click", () => {
     previewModalImageEl.src = data.link;
     previewModalImageEl.alt = data.name;
     previewModalCaptionEl.textContent = data.name;
-
     openModal(previewModalEl);
   });
 
@@ -109,19 +108,43 @@ function getCardElement(data) {
   return cardElement;
 }
 
-// Modal helpers
+//Modal Helpers (Corrected)
+
+function handleEscClose(evt) {
+  if (evt.key === "Escape") {
+    const openedModal = document.querySelector(".modal_is-opened");
+    if (openedModal) {
+      closeModal(openedModal);
+    }
+  }
+}
+
 function openModal(modal) {
   modal.classList.add("modal_is-opened");
+  document.addEventListener("keydown", handleEscClose);
 }
 
 function closeModal(modal) {
   modal.classList.remove("modal_is-opened");
+  document.removeEventListener("keydown", handleEscClose);
 }
 
-// Edit Profile Modal
+// Overlay click-to-close
+document.querySelectorAll(".modal").forEach((modal) => {
+  modal.addEventListener("mousedown", (evt) => {
+    if (evt.target.classList.contains("modal")) {
+      closeModal(modal);
+    }
+  });
+});
+
+//Edit Profile Modal
+
 editProfileButtonEl.addEventListener("click", () => {
   editProfileNameInputEl.value = profileNameEl.textContent;
   editProfileDescriptionInputEl.value = profileDescriptionEl.textContent;
+
+  resetValidation(editProfileFormEl, settings);
   openModal(editProfileModalEl);
 });
 
@@ -138,8 +161,10 @@ editProfileFormEl.addEventListener("submit", (evt) => {
   closeModal(editProfileModalEl);
 });
 
-// New Post Modal
+//New Post Modal
+
 newPostButtonEl.addEventListener("click", () => {
+  resetValidation(newPostFormEl, settings);
   openModal(newPostModalEl);
 });
 
@@ -159,15 +184,18 @@ newPostFormEl.addEventListener("submit", (evt) => {
   cardsListEl.prepend(newCard);
 
   newPostFormEl.reset();
+  resetValidation(newPostFormEl, settings);
   closeModal(newPostModalEl);
 });
 
-// Preview Modal Close Button
+// Preview Modal
+
 previewModalCloseBtnEl.addEventListener("click", () => {
   closeModal(previewModalEl);
 });
 
-// Initial render
+//Initial Render
+
 initialCards.forEach((item) => {
   const cardElement = getCardElement(item);
   cardsListEl.append(cardElement);

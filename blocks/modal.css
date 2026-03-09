@@ -122,6 +122,12 @@
   opacity: 0.8;
 }
 
+.modal__save-button_disabled {
+  opacity: 0.5;
+  cursor: default;
+  pointer-events: none;
+}
+
 .modal__container_type_preview {
   background: none;
   padding: 0;
