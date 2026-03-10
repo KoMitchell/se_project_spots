@@ -12,6 +12,7 @@
   object-fit: cover;
   display: block;
   border-radius: 8px;
+  position: relative;
 }
 
 .card__content {
@@ -68,10 +69,12 @@
   opacity: 0.4;
   cursor: pointer;
   transition: opacity 0.2s ease;
+  flex-shrink: 0;
 }
 
 .card__like-button:hover {
   opacity: 1;
+  cursor: pointer;
 }
 
 .card__like-button_active {
