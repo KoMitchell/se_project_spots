@@ -1,3 +1,10 @@
+import "./index.css";
+import {
+  enableValidation,
+  resetValidation,
+  settings,
+} from "../scripts/validation.js";
+
 // Initial cards
 const initialCards = [
   {
@@ -200,3 +207,5 @@ initialCards.forEach((item) => {
   const cardElement = getCardElement(item);
   cardsListEl.append(cardElement);
 });
+
+enableValidation(settings);

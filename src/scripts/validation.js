@@ -50,7 +50,7 @@ const setEventListeners = (formElement, config) => {
   });
 };
 
-const enableValidation = (config) => {
+export const enableValidation = (config) => {
   const formList = Array.from(document.querySelectorAll(config.formSelector));
 
   formList.forEach((formElement) => {
@@ -58,7 +58,7 @@ const enableValidation = (config) => {
   });
 };
 
-function resetValidation(formElement, config) {
+export function resetValidation(formElement, config) {
   const inputList = Array.from(
     formElement.querySelectorAll(config.inputSelector),
   );
@@ -71,7 +71,7 @@ function resetValidation(formElement, config) {
   toggleButtonState(inputList, buttonElement, config);
 }
 
-const settings = {
+export const settings = {
   formSelector: ".modal__form",
   inputSelector: ".modal__input",
   submitButtonSelector: ".modal__save-button",
@@ -79,5 +79,3 @@ const settings = {
   inputErrorClass: "modal__input_type_error",
   errorClass: "modal__error_visible",
 };
-
-enableValidation(settings);
