@@ -45,11 +45,22 @@
 
         <!-- Profile section -->
         <section class="profile page__section">
-          <img
-            src="<%= require('./images/avatar.jpg') %>"
-            alt="User avatar"
-            class="profile__avatar"
-          />
+          <div class="profile__avatar-container">
+            <img
+              src="<%= require('./images/avatar.jpg') %>"
+              alt="User avatar"
+              class="profile__avatar"
+            />
+
+            <button type="button" class="profile__avatar-edit-button">
+              <img
+                src="<%= require('./images/button-secondary.svg') %>"
+                alt=""
+                class="profile__avatar-edit-icon"
+              />
+              <span class="visually-hidden">Edit avatar</span>
+            </button>
+          </div>
 
           <div class="profile__info">
             <h1 class="profile__name">Bessie (Elizabeth) Coleman</h1>
@@ -181,17 +192,63 @@
         </div>
       </div>
 
-      <!-- Preview Image Modal -->
-      <div class="modal" id="preview-modal">
+      <!-- Edit Avatar Modal -->
+      <div class="modal" id="edit-avatar-modal">
         <div class="modal__container">
           <button type="button" class="modal__close-button">
             <img src="<%= require('./images/close-icon.svg') %>" alt="Close" />
           </button>
+
+          <h2 class="modal__title">Change profile picture</h2>
+
+          <form class="modal__form" name="edit-avatar">
+            <label for="profile-avatar-input" class="modal__label">
+              Avatar link
+              <input
+                id="profile-avatar-input"
+                type="url"
+                class="modal__input"
+                placeholder="Paste a link to the new avatar"
+                required
+              />
+              <span id="profile-avatar-input-error" class="modal__error"></span>
+            </label>
+
+            <button type="submit" class="modal__save-button">Save</button>
+          </form>
+        </div>
+      </div>
+
+      <!-- Delete Confirmation Modal -->
+      <div class="modal" id="delete-card-modal">
+        <div class="modal__container">
+          <button type="button" class="modal__close-button">
+            <img src="<%= require('./images/close-icon.svg') %>" alt="Close" />
+          </button>
+
+          <h2 class="modal__title">Are you sure?</h2>
+
+          <form class="modal__form" name="delete-card">
+            <button type="submit" class="modal__save-button">
+              Yes, delete
+            </button>
+          </form>
+        </div>
+      </div>
+
+      <!-- Preview Image Modal -->
+      <div class="modal" id="preview-modal">
+        <div class="modal__container modal__container_type_preview">
+          <button type="button" class="modal__close-button">
+            <img src="<%= require('./images/close-icon.svg') %>" alt="Close" />
+          </button>
+
           <img
             class="modal__image"
             src="data:image/gif;base64,R0lGODlhAQABAAAAACw="
             alt=""
           />
+
           <p class="modal__caption"></p>
         </div>
       </div>
