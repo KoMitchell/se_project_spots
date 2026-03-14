@@ -84,7 +84,7 @@
 
 .card__like-button_active:hover {
   background-image: url("../images/like-active.svg");
-  opacity: 0;
+  opacity: 0.8;
 }
 
 @media screen and (max-width: 630px) {
