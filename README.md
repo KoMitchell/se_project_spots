@@ -28,5 +28,9 @@ and some challenges I faced while building it:
 
 - [Komeh Mitchell_ProjectPitch_Spot_1st-video]
   https://www.loom.com/share/44ccea168bf243e689fd4de5c760db4c
+
 - [Komeh Mitchell_ProjectPitch_Spot_2nd-video]  
   https://www.loom.com/share/44ccea168bf243e689fd4de5c760db4c
+
+[Komeh Mitchell_ProjectPitch_Spot_final-video]
+https://www.loom.com/share/3eead3df38e545be862f4ca545ee989e
